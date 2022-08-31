@@ -1,0 +1,198 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import "./libs/slick.scss";
+// colors
+$blue:#0033A0;
+$skyBlue:#69B3E7;
+$ginger:#CF4520;
+$backgroundBlue:#E6F1FC;
+$backgroundSkyblue:#E6F1FC;
+$dark: #000;
+$white: #fff;
+
+// styles
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.header{
+    max-width: 1340px;
+    padding: 12px 50px 30px;
+    margin: 0 auto;
+}
+.headerTop{
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        padding-bottom:15px;
+        border-bottom: 1px solid #E5E5E5;
+    }
+    &__item:first-child {
+        margin-left: 60px;
+    }
+    &__link{
+        text-decoration: none;
+        color: $dark;
+    }
+    &__versionA{
+        color:$blue;
+    }
+    &__versionCircle{
+        border-radius: 360px;
+        border:1px solid $blue;
+        font-weight: 700;
+        padding: 4px 10px;
+        margin-right: 18px;
+        font-size: 16px;
+    }
+    &__versionSmallA{
+        font-size: 10px;
+    }
+    &__btn{
+        color:$blue;
+        font-weight: 600;
+        font-size: 13px;
+    }
+}
+.headerMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E5E5E5;
+
+    &__leftBlock{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__buttons{
+        margin-left: 56px;
+        
+        .headerMain__btn{
+            padding: 8px 20px;
+            border-radius: 360px;
+            font-weight: 600;
+            font-size: 16px;
+            border: transparent;
+            cursor: pointer;
+        }
+        .headerMain__btnSearch{
+            background-color: $blue;
+            color: $white;
+            margin-right: 14px;
+        }
+        .headerMain__btnWorkers{
+            background-color: $white;
+            color:$blue;
+            border: 1px solid $blue;
+        }
+    }
+    &__logo{
+        background-image: url(../images/logo.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 56px;
+        width: 142px;
+        display: block;
+    }
+    .headerMain__list{
+        display:flex;
+        list-style-type: none;
+    }
+    &__item:not(:first-child){
+        margin-left: 20px;
+    }
+    &__link{
+        text-decoration: none;
+        color: $blue;
+        font-weight: 500;
+        font-size: 13px;
+    }
+}
+
+.headerBottom{
+    &__menu{
+        display: flex;
+        list-style-type: none;
+        font-weight: 600;
+        padding: 0;
+        margin-top: 46px;
+        font-size: 12px;
+        gap:40px;
+    }
+    &__link{
+        text-decoration: none;
+        color:$dark;
+    }
+}
+
+#first
+{
+        max-width: 1340px;
+        padding: 0px 50px;
+        margin: 0 auto;
+  
+}
+
+.statistic{
+    display:flex;
+    max-width: 1340px;
+    padding: 0px 50px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 30px;
+
+    &__digit{
+        font-weight: 500;
+        font-size: 60px;
+    }
+    &__flex{
+        display: flex;  
+        padding-top: 50px;  
+    }
+    
+    &__block:not(:first-child){
+        margin-left:60px;
+    }
+    &__wrap{
+        width:655px;
+        background-color: $backgroundSkyblue;
+        border-radius:10px;
+        padding:30px 25px;
+        box-sizing: border-box;
+       
+        position:relative;
+        overflow:hidden;
+    }
+    &__heading{
+        margin: 0;
+    }
+    &__imgBg{
+        position: absolute;
+        right:40px;
+        top: 0;
+    }
+    // 
+    &__card{
+        background-color: $backgroundSkyblue;
+        border-radius:10px;
+        padding:30px 25px;
+        box-sizing: border-box;
+        width:312px;   
+    }
+    &__paragraph{
+        margin-bottom:55px;
+    }
+    &__btn{
+        background-color: $skyBlue;
+        border-radius: 360px;
+        border:transparent;
+        padding:12px 20px; 
+        cursor:pointer;
+        color: $white;
+    }
+}
