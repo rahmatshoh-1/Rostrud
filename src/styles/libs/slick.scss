@@ -1,14 +1,50 @@
 @import "../../../node_modules/slick-slider/slick/slick.scss";
 
 // блок слайдера
-
+// colors
+$blue:#0033A0;
+$skyBlue:#69B3E7;
+$ginger:#CF4520;
+$bgBlue:#E6F1FC;
+$bgSkyBlue:#E6F1FC;
+$dark: #000;
+$white: #fff;
 .carousel{
    padding-bottom: 30px;
    
    border-radius:10px;
    &__img{
-        max-height: 360px;
         margin:0 auto;
+    }
+    &__desctop{
+        position: relative;
+        .carousel__heading{
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            width: 400px;
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 120%;
+        }
+    }
+    &__laptop,
+    &__mobile{
+        display: none;
+    }
+    &__mobile{
+        height: 440px;
+        .carousel__heading{
+            width: 270px;
+            font-weight: 500;
+            font-size: 20px;
+            margin: 20px 10px;
+        }
+    }
+
+    &__item{
+        border-radius: 10px;
+        background-color: $bgSkyBlue;
     }
 }
 
@@ -68,5 +104,66 @@
 .slick-active{
     button {
         background-color: #67B9E8;
+    }
+}
+
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-md-lg: 1080px;
+$breakpoint-lg: 1111px;
+$breakpoint-xl: 1234px;
+@media screen and (max-width:$breakpoint-md){
+    .carousel{
+        .carousel__desctop,
+        .carousel__mobile{
+            display: none;
+        }
+        .carousel__laptop{
+            display: block;
+            position: relative;
+            .carousel__heading{
+                position: absolute;
+                margin: 0;
+                bottom: 20px;
+                left: 20px;
+                width: 300px;
+                font-size: 30px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:$breakpoint-md){
+    .carousel{
+        .carousel__desctop,
+        .carousel__mobile{
+            display: none;
+        }
+        .carousel__laptop{
+            display: block;
+            position: relative;
+            .carousel__heading{
+                position: absolute;
+                margin: 0;
+                bottom: 20px;
+                left: 20px;
+                width: 300px;
+                font-size: 30px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+@media screen and (max-width:$breakpoint-sm){
+    .carousel{
+        .carousel__desctop,
+        .carousel__laptop{
+            display: none;
+        }
+        .carousel__mobile{
+            display: block;
+        }
     }
 }

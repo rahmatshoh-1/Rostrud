@@ -1,12 +1,13 @@
 // Font
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
 @import "./libs/slick.scss";
 // colors
 $blue:#0033A0;
 $skyBlue:#69B3E7;
 $ginger:#CF4520;
-$backgroundBlue:#E6F1FC;
-$backgroundSkyblue:#E6F1FC;
+$bgBlue:#E6F1FC;
+$bgSkyBlue:#E6F1FC;
 $dark: #000;
 $white: #fff;
 
@@ -23,6 +24,7 @@ body{
 .headerTop{
     &__list{
         display: flex;
+        align-items: center;
         justify-content: space-between;
         font-size: 14px;
         padding-bottom:15px;
@@ -43,6 +45,7 @@ body{
         border:1px solid $blue;
         font-weight: 700;
         padding: 4px 10px;
+        white-space: nowrap;
         margin-right: 18px;
         font-size: 16px;
     }
@@ -97,6 +100,9 @@ body{
         height: 56px;
         width: 142px;
         display: block;
+    }
+    &__hamburger{
+        display: none;
     }
     .headerMain__list{
         display:flex;
@@ -160,13 +166,11 @@ body{
     }
     &__wrap{
         width:655px;
-        background-color: $backgroundSkyblue;
+        background-color: $bgSkyBlue;
         border-radius:10px;
         padding:30px 25px;
         box-sizing: border-box;
-       
         position:relative;
-        overflow:hidden;
     }
     &__heading{
         margin: 0;
@@ -174,15 +178,19 @@ body{
     &__imgBg{
         position: absolute;
         right:40px;
-        top: 0;
+        bottom: 0;
+        
     }
     // 
     &__card{
-        background-color: $backgroundSkyblue;
+        background-color: $bgSkyBlue;
         border-radius:10px;
         padding:30px 25px;
         box-sizing: border-box;
-        width:312px;   
+        width:312px;
+    }
+    &__card:nth-of-type(2){
+        margin-left: 30px;
     }
     &__paragraph{
         margin-bottom:55px;
@@ -195,4 +203,9 @@ body{
         cursor:pointer;
         color: $white;
     }
+    .d-flex{
+        display: flex;
+    }
 }
+
+@import "./media.scss";

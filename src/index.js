@@ -4,5 +4,6 @@ import $ from 'jquery';
 import 'slick-slider';
 
 $('.carousel').slick({
-    dots: true
+    dots: true,
+    autoplay:true
 });
