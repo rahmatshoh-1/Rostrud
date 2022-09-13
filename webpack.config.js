@@ -12,15 +12,17 @@ const devServer = (isDev) => !isDev ? {} : {
 
 module.exports = ({develop}) => ({
   mode: develop ? 'development' : 'production',
-  entry: './src/index.js',
+  entry: {
+    index:'./source/index.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
     clean: true,
   },
   plugins: [
       new HtmlWebpackPlugin({
-          template: './src/index.html'
+          template: './source/index.html'
       }),
       new MiniCssExtractPlugin({
           filename: './styles/main.css'

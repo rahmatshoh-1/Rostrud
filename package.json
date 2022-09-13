@@ -2,7 +2,8 @@
   "name": "workRu",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve --env develop"
+    "dev": "webpack serve --env develop",
+    "production": "webpack --env production"
   },
   "devDependencies": {
     "css-loader": "^6.5.1",
